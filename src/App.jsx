@@ -1,11 +1,12 @@
 import React from "react";
-import Heading from "./Heading.jsx";
-import TouristInfoCards from "./TouristInfoCards.jsx";
-import Footer from "./Footer.jsx";
-import SearchResults from "./SearchResults.jsx";
-
-import Bookings from "./Bookings";
+import Heading from "./Components/Heading.jsx";
+import TouristInfoCards from "./Components/TouristInfoCards.jsx";
+import Footer from "./Components/Footer.jsx";
+import SearchResults from "./Components/SearchResults.jsx";
+import cities from "./Components/City.jsx";
+import Bookings from "./Components/Bookings.jsx";
 import "./App.css";
+import Restaurant from "./Components/Restaurant";
 
 //footer
 
@@ -15,16 +16,15 @@ const footer = [
   "0123 456789",
 ];
 
-const App = () => {
-  return (
-    <div className="App">
-      <Heading />
-      <Bookings />
-      <TouristInfoCards cities={cities} />
-      <SearchResults />
-      <Footer footer={footer} />
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <Heading />
+    <SearchResults />
+    <TouristInfoCards cities={cities} />
+    <Bookings />
+    <Restaurant />
+    <Footer footer={footer} />
+  </div>
+);
 
 export default App;

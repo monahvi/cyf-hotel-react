@@ -5,17 +5,61 @@
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  border-radius: 50%;
+}
+  
+  
+.App-header {
+  background-color: #e28242;
+  height: 50px;
+  padding: 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+.card-container{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 50px;
+}
+.card{
+  border: 2px solid blue;
+}
+/* .tbl-container{
+  border: 4px solid orangered;
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #222;
-  height: 50px;
-  padding: 20px;
-  color: white;
-  text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  font-weight: bold;
+.tbl-container tr {
+  border-bottom: 2px solid orange;
+  background-color: aqua;
+  width: 100%;
+  font-size: 20px;
+} */
+
+.tbl{
+width: auto;
+height: 300px;
+background-color: aquamarine;
+}
+
+table thead tr{
+  background-color: rgb(113, 113, 161);
+  font-size: 17px;
+}
+table,th,td{
+  border: 1px solid coral;
+  text-align: center;
+  padding: 0px 30px;
+}
+.tbl.container{
+  width: 100%;
+  background-color: burlywood;
 }
 
 .App-title {
@@ -25,6 +69,24 @@
 .App-content {
   padding-top: 20px;
   font-size: large;
+}
+.restaurant{
+  text-align: center;
+  background-color: #e28242;
+  margin-top: 20px;
+  font-size: 25px;
+  
+}
+.restaurant li{
+  list-style-type: none;
+}
+
+
+.footer-app{
+  text-align: center;
+}
+.footer-app li{
+  list-style-type: none;
 }
 
 @keyframes App-logo-spin {
@@ -39,9 +101,8 @@
   padding: 5px 0 20px 0;
 }
 
-tr {
-  color: #5b5757;
-}
+
+
 
 .results {
   padding-top: 15px;

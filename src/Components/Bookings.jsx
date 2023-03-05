@@ -1,32 +1,35 @@
-import React from "react";
-import Search from "./Search.jsx";
+import React, { useState } from "react";
+import Search from "./Search";
 import SearchResults from "./SearchResults.jsx";
-import data from "./data/fakeBookings.json";
+import data from "../data/fakeBookings.json";
+import moment from "moment";
 
 const Bookings = () => {
+  const [bookings, setBookings] = useState(data);
+
   const search = (searchVal) => {
     console.info("TO DO!", searchVal);
   };
-  console.log(data);
-
   return (
     <div className="App-content">
       <div className="container">
         <Search search={search} />
-        <div>
-          <table>
+        <div className="tbl-container">
+          <table className="tbl">
             <thead>
               <tr>
-                <th>id</th>
-                <th>title</th>
-                <th>first name</th>
-                <th>sure name</th>
-                <th>email</th>
-                <th>room id</th>
-                <th>check in date</th>
-                <th>check out date</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>First name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Room id</th>
+                <th>Check in date</th>
+                <th>Check out date</th>
+                <th>Nights</th>
               </tr>
             </thead>
+
             {data.map((item) => (
               <SearchResults
                 key={item.id}
@@ -38,6 +41,10 @@ const Bookings = () => {
                 roomId={item.roomId}
                 checkInDate={item.checkInDate}
                 checkOutDate={item.checkOutDate}
+                nights={moment(item.checkOutDate).diff(
+                  moment(item.checkInDate),
+                  "days"
+                )}
               />
             ))}
           </table>
