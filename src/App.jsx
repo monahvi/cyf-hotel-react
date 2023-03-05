@@ -1,8 +1,8 @@
 import React from "react";
-import Heading from "./Heading";
-import TouristInfoCards from "./TouristInfoCards";
-import Footer from "./Footer";
-import SearchResults from "./SearchResults";
+import Heading from "./Heading.jsx";
+import TouristInfoCards from "./TouristInfoCards.jsx";
+import Footer from "./Footer.jsx";
+import SearchResults from "./SearchResults.jsx";
 
 import Bookings from "./Bookings";
 import "./App.css";
