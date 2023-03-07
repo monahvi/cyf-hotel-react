@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Search from "./Search.jsx";
 import SearchResults from "./SearchResults.jsx";
-import data from "./data/fakeBookings.json";
+import data from "../data/fakeBookings.json";
 import moment from "moment";
 
 const Bookings = () => {
