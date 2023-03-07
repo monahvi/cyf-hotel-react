@@ -2,7 +2,6 @@ import React from "react";
 import Heading from "./Components/Heading.jsx";
 import TouristInfoCards from "./Components/TouristInfoCards.jsx";
 import Footer from "./Components/Footer.jsx";
-import SearchResults from "./Components/SearchResults.jsx";
 import cities from "./Components/City.jsx";
 import Bookings from "./Components/Bookings.jsx";
 import "./App.css";
@@ -16,15 +15,19 @@ const footer = [
   "0123 456789",
 ];
 
-const App = () => (
+const App = () => {
+  return(
+
   <div className="App">
     <Heading />
-    <SearchResults />
+    {/* <SearchResults /> */}
     <TouristInfoCards cities={cities} />
     <Bookings />
     <Restaurant />
     <Footer footer={footer} />
   </div>
-);
+  );
+}
+  
 
 export default App;

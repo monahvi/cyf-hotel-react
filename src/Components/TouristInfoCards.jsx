@@ -1,5 +1,5 @@
 import React from "react";
-import cities from "./City";
+
 
 const TouristInfoCards = props => {
   return (

@@ -16,7 +16,7 @@ const SearchResults = (item) => {
         <td>{item.id}</td>
         <td>{item.title}</td>
         <td>{item.firstName}</td>
-        <td>{item.surName}</td>
+        <td>{item.surname}</td>
         <td>{item.email}</td>
         <td>{item.roomId}</td>
         <td>{item.checkInDate}</td>

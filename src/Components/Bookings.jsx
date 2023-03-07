@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Search from "./Search";
+import Search from "./Search.jsx";
 import SearchResults from "./SearchResults.jsx";
-import data from "../data/fakeBookings.json";
+import data from "./data/fakeBookings.json";
 import moment from "moment";
 
 const Bookings = () => {
-  const [bookings, setBookings] = useState(data);
+  const [bookings] = useState(data);
 
   const search = (searchVal) => {
     console.info("TO DO!", searchVal);
@@ -36,7 +36,7 @@ const Bookings = () => {
                 id={item.id}
                 title={item.title}
                 firstName={item.firstName}
-                surName={item.surName}
+                surname={item.surname}
                 email={item.email}
                 roomId={item.roomId}
                 checkInDate={item.checkInDate}
